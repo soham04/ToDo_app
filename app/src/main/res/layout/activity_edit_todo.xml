@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editTodo">
+
+    <ImageView
+        android:id="@+id/timeSelector"
+        android:layout_width="55dp"
+        android:layout_height="42dp"
+        android:outlineSpotShadowColor="#D54B4B"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/timeBox"
+        app:layout_constraintStart_toEndOf="@+id/timeBox"
+        app:layout_constraintTop_toTopOf="@+id/timeBox"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_timelapse_24"
+        app:tint="#FFAB40"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/timeBox"
+        android:layout_width="289dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:clickable="false"
+        android:ems="10"
+        android:hint="@string/enter_time"
+        android:inputType="textPersonName"
+        android:lines="6"
+        android:minLines="3"
+        android:singleLine="false"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/dateBox"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/dateBox"
+        android:layout_width="288dp"
+        android:layout_height="43dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:hint="Enter date"
+        android:inputType="textPersonName"
+        android:lines="6"
+        android:minLines="3"
+        android:singleLine="false"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/set_reminder"
+        android:textColor="#FFAB40"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/explainBox" />
+
+    <EditText
+        android:id="@+id/explainBox"
+        android:layout_width="333dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="@string/explain_the_task"
+        android:inputType="textPersonName"
+        android:lines="6"
+        android:minLines="3"
+        android:singleLine="false"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFAB40"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11080711" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/task_title"
+        android:textColor="#FFAB40"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <EditText
+        android:id="@+id/titleBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_the_task_title"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/the_task"
+        android:textColor="#FFAB40"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/titleBox" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="478dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_task"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar2" />
+
+    <ImageView
+        android:id="@+id/dateSelector"
+        android:layout_width="55dp"
+        android:layout_height="42dp"
+        android:outlineAmbientShadowColor="#EF6F6F"
+        app:layout_constraintBottom_toBottomOf="@+id/dateBox"
+        app:layout_constraintStart_toEndOf="@+id/dateBox"
+        app:layout_constraintTop_toTopOf="@+id/dateBox"
+        app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+        app:tint="#FFAB40" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
