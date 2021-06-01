@@ -22,13 +22,12 @@
 
     <EditText
         android:id="@+id/timeBox"
-        android:layout_width="289dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
         android:clickable="false"
         android:ems="10"
         android:hint="@string/enter_time"
-        android:inputType="textPersonName"
+        android:inputType="none"
         android:lines="6"
         android:minLines="3"
         android:singleLine="false"
@@ -45,7 +44,7 @@
         android:editable="false"
         android:ems="10"
         android:hint="Enter date"
-        android:inputType="textPersonName"
+        android:inputType="none"
         android:lines="6"
         android:minLines="3"
         android:singleLine="false"
@@ -121,8 +120,8 @@
 
     <EditText
         android:id="@+id/titleBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="333dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:hint="@string/enter_the_task_title"
         android:inputType="textPersonName"
@@ -189,5 +188,16 @@
         app:layout_constraintTop_toTopOf="@+id/dateBox"
         app:srcCompat="@drawable/ic_baseline_calendar_today_24"
         app:tint="#FFAB40" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="322dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:dropDownWidth="wrap_content"
+        android:scrollbarSize="10dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/timeBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
